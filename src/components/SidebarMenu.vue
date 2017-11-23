@@ -1,27 +1,33 @@
 <template>
   <ul class="sidebar-menu">
     <li class="header">TOOLS</li>
-    <router-link tag="li" class="pageLink" to="/">
+    <router-link tag="li" class="pageLink" to="/admin">
       <a>
         <i class="fa fa-desktop"></i>
         <span class="page">Dashboard</span>
       </a>
     </router-link>
-    <router-link tag="li" class="pageLink" to="/tables">
+    <router-link tag="li" class="pageLink" to="/admin/tables">
       <a>
         <i class="fa fa-table"></i>
         <span class="page">Tables</span>
       </a>
     </router-link>
+    <router-link tag="li" class="pageLink" to="/admin/articles">
+      <a>
+        <i class="fa fa-table"></i>
+        <span class="page">Articles</span>
+      </a>
+    </router-link>
 
     <li class="header">ME</li>
-    <router-link tag="li" class="pageLink" to="/tasks">
+    <router-link tag="li" class="pageLink" to="/admin/tasks">
       <a>
         <i class="fa fa-tasks"></i>
         <span class="page">Tasks</span>
       </a>
     </router-link>
-    <router-link tag="li" class="pageLink" to="/setting">
+    <router-link tag="li" class="pageLink" to="/admin/setting">
       <a>
         <i class="fa fa-cog"></i>
         <span class="page">Settings</span>
@@ -55,19 +61,19 @@
     </li>
 
     <li class="header">LOGS</li>
-    <router-link tag="li" class="pageLink" to="/access">
+    <router-link tag="li" class="pageLink" to="/admin/access">
       <a>
         <i class="fa fa-book"></i>
         <span class="page">Access</span>
       </a>
     </router-link>
-    <router-link tag="li" class="pageLink" to="/server">
+    <router-link tag="li" class="pageLink" to="/admin/server">
       <a>
         <i class="fa fa-hdd-o"></i>
         <span class="page">Server</span>
       </a>
     </router-link>
-    <router-link tag="li" class="pageLink" to="/repos">
+    <router-link tag="li" class="pageLink" to="/admin/repos">
       <a>
         <i class="fa fa-heart"></i>
         <span class="page">Repos</span>
