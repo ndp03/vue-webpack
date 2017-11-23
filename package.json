@@ -1,7 +1,7 @@
 {
   "name": "vue-webpack",
   "version": "0.0.1",
-  "description": "A CMS public and admin website with Vue Js and Webpack.",
+  "description": "A CMS public and admin website with Vue Js and Webpack. The project is based on https://github.com/misterGF/CoPilot",
   "author": "Sean Phung",
   "repository": "",
   "license": "MIT",
