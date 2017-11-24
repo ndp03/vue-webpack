@@ -2,7 +2,6 @@
     <div class="container public-container">
         <MainNav></MainNav>
         <HeroSlider></HeroSlider>
-        <h1>Public</h1>
     </div>
 </template>
 
