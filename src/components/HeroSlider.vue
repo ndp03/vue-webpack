@@ -1,7 +1,9 @@
 <template>
     <!-- === Slider ===-->
     <div class="slider-inner">
-        <div id="da-slider" class="da-slider" style="background-position: 400% 0%; background-image: url('static/plugins/parallax-slider/img/bg.jpg')" >
+        <!--<div id="da-slider" class="da-slider" style="background-position: 400% 0%; background-image: url('static/plugins/parallax-slider/img/bg.jpg')" >-->
+        <div id="da-slider" class="da-slider" style="background-position: 0% 0%; background-image: url('https://s3-ap-southeast-2.amazonaws.com/labbit01/landscapes/001.jpg'); background-size: contain;" >
+        
             <div class="da-slide da-slide-toleft">
                 <h2><i>CLEAN &amp; FRESH</i> <br> <i>FULLY RESPONSIVE</i> <br> <i>DESIGN</i></h2>
                 <p><i>Lorem ipsum dolor amet</i> <br> <i>tempor incididunt ut</i> <br> <i>veniam omnis </i></p>

@@ -14,6 +14,11 @@
             </div>
         </div>
         <div class="row">
+            <div class="col-sm-12"> 
+                <image-uploader name="fooImport" @files="selectedFile" :show="true" :showNative="true" />
+            </div>
+        </div>
+        <div class="row">
             <div class="col-sm-12 table-responsive">
                 <table class="table table-striped">
                     <tbody>
@@ -23,19 +28,6 @@
                             <th>Description</th>
                             <th style="width: 40px">Action</th>
                         </tr>
-                        <!--<tr>
-                            <td>1.</td>
-                            <td>
-                                <div>Articles 1</div>
-                            </td>
-                            <td>
-                                <div>Blabh alal baoij ds .....</div>
-                            </td>
-                            <td>
-                                <button type="button" name="Edit">Edit</button>
-                                <button type="button" name="Edit">Delete</button>
-                            </td>
-                        </tr>-->
                         <tr v-for="item in articles">
                             <td><div>{{ item.id}}</div></td>
                             <td><div>{{ item.name}}</div></td>
@@ -44,7 +36,6 @@
                                 <button type="button" name="Edit">Edit</button>
                                 <button type="button" name="Delete">Delete</button>
                             </td>
-
                         </tr>
 
                     </tbody>
@@ -55,7 +46,14 @@
 </template>
 
 <script>
+import ImageUploader from '../ImageUploader';
+
     export default {
+        components: { ImageUploader },
+        props: {
+            artName: { type: String, default: "" },
+            artDesc: { type: String, default: "" }
+        },
         data() {
             return {
                 articles: [
@@ -80,6 +78,10 @@
                     name: this.artName,
                     desc: this.artDesc
                 });
+            },
+            selectedFile: function(data) {
+                console.log('selectedFile');
+                console.log(data);
             }
         }
     };
