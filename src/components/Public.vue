@@ -1,7 +1,7 @@
 <template>
     <div class="container public-container">
         <MainNav></MainNav>
-        <HeroSlider></HeroSlider>
+        <!--<HeroSlider></HeroSlider>-->
         <img-grid></img-grid>
     </div>
 </template>
