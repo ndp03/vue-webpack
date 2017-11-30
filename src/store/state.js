@@ -8,5 +8,14 @@ export default {
     messages: [{1: 'test', 2: 'test'}],
     notifications: [],
     tasks: []
+  },
+  greetings: 'hello world',
+  articles: {
+    index : 1,
+    list: [ {
+      id: 1,
+      name: "First article",
+      desc: "Love is all around!"
+    }]
   }
 }

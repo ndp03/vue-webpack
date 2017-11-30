@@ -10,5 +10,9 @@ export default {
   },
   SET_TOKEN (state, token) {
     state.token = token
-  }
+  },
+  ADD_ARTICLE (state, a) {
+    state.articles.list.push(a);
+    state.articles.index = a.id;
+  } 
 }

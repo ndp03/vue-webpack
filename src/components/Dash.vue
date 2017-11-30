@@ -36,6 +36,7 @@
                         </h4>
                         <!-- The message -->
                         <p>Why not consider this a test message?</p>
+                        <p> {{ greetings }}</p>
                       </a>
                     </li>
                     <!-- end message -->
@@ -155,7 +156,7 @@
       <strong>Copyright &copy; {{year}}
         <a href="javascript:;">CoPilot</a>.</strong> All rights reserved.
     </footer>
-    
+
   </div>
   <!-- ./wrapper -->
 </template>
@@ -185,7 +186,7 @@
     },
     computed: {
     ...mapState([
-      'userInfo'
+      'userInfo', 'greetings'
     ]),
       demo() {
         return {

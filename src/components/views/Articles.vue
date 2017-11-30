@@ -47,37 +47,38 @@
 
 <script>
 import ImageUploader from '../ImageUploader';
+import { mapState } from 'vuex';
 
     export default {
         components: { ImageUploader },
-        props: {
-            artName: { type: String, default: "" },
-            artDesc: { type: String, default: "" }
-        },
+        // props: {
+        //     artName: { type: String, default: "" },
+        //     artDesc: { type: String, default: "" }
+        // },
         data() {
             return {
-                articles: [
-                    {
-                        id: 1,
-                        name: 'article 1',
-                        desc: 'fadsfdas dsadsa'
-                    }
-                ]
+                artName: "",
+                artDesc: ""
             }
         },
         mounted() {
             this.$nextTick(() => { });
         },
+        computed: {
+            ...mapState({
+                articles : state => state.articles.list
+            })
+        },
         methods: {
             submit: function (e) {
-                alert(this.sName);
                 e.preventDefault();
-                debugger;
-                this.articles.push({
-                    id: 2,
+                console.log(this.$store.state);
+                let a = {
+                    id: this.$store.state.articles.index + 1,
                     name: this.artName,
                     desc: this.artDesc
-                });
+                };
+                this.$store.commit('ADD_ARTICLE', a);
             },
             selectedFile: function(data) {
                 console.log('selectedFile');
